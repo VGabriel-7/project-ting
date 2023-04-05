@@ -10,6 +10,7 @@ def process(path_file, instance):
         "linhas_do_arquivo": importer
     }
 
+    # O(n²)
     for i in range(0, len(instance)):
         if instance.search(i)["nome_do_arquivo"] == process["nome_do_arquivo"]:
             return
@@ -28,6 +29,7 @@ def remove(instance):
 
 def file_metadata(instance, position):
     try:
+        # O(n)
         print(instance.search(position))
     except IndexError:
         print('Posição inválida', file=sys.stderr)
