@@ -14,7 +14,7 @@ def process(path_file, instance):
     for i in range(0, len(instance)):
         if instance.search(i)["nome_do_arquivo"] == process["nome_do_arquivo"]:
             return
-    
+
     instance.enqueue(process)
     print(process)
 
